@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/styles.css') }}">
+</head>
+<body>
+
+<div class="lava-bg">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="overlay"></div>
+<div class="container">
+    <h1>Ingrese la Url</h1>
+
+    <form action="/resultados" method="post">
+        <input
+            type="url"
+            name="url"
+            placeholder="https://retvel.online"
+            required
+        >
+
+        <button type="submit">Aceptar</button>
+    </form>
+</div>
+
+</body>
+</html>

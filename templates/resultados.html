@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados del Análisis</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/resultados.css') }}">
+</head>
+<body>
+
+<div class="lava-bg">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="overlay"></div>
+
+<div class="page">
+
+    <div class="card">
+
+        <div class="item">
+            <span class="label">URL</span>
+            <span class="value url">{{ url }}</span>
+        </div>
+
+        <div class="item">
+            <span class="label">TÍTULO</span>
+            <span class="value">{{ titulo }}</span>
+        </div>
+
+        <div class="item">
+            <span class="label">PUNTAJE CONTENIDO</span>
+            <span class="value">{{ puntaje_contenido }}</span>
+        </div>
+
+        <div class="item">
+            <span class="label">PUNTAJE JERARQUÍA</span>
+            <span class="value">{{ puntaje_jerarquia }}</span>
+        </div>
+
+        <div class="item">
+            <span class="label">PUNTAJE ENLACES</span>
+            <span class="value">{{ puntaje_enlaces }}</span>
+        </div>
+
+        <div class="item">
+            <span class="label">PUNTAJE DISTRIBUCIÓN</span>
+            <span class="value">{{ puntaje_distribucion }}</span>
+        </div>
+
+    </div>
+
+    <div class="detalle">
+        <div class="score-value">{{ puntaje_seo }}</div>
+
+        {% if descripcion %}
+        <div class="score-description">
+            {{ descripcion }}
+        </div>
+        {% endif %}
+    </div>
+
+</div>
+
+</body>
+</html>
